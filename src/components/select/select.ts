@@ -424,6 +424,7 @@ export default class SlSelect extends LitElement {
         >
           <div
             slot="trigger"
+            part="box"
             id=${this.inputId}
             class="select__box"
             role="combobox"
@@ -444,7 +445,7 @@ export default class SlSelect extends LitElement {
             @focus=${this.handleFocus}
             @keydown=${this.handleKeyDown}
           >
-            <div class="select__label">
+            <div class="select__label" part="label">
               ${this.displayTags.length
                 ? html` <span part="tags" class="select__tags"> ${this.displayTags} </span> `
                 : this.displayLabel || this.placeholder}
